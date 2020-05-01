@@ -1,0 +1,6 @@
+classes= 2
+train  = /content/darknet/train.txt
+valid  = /content/darknet/test.txt
+names = /content/darknet/obj.names
+backup = /content/drive/'My Drive'/colab/
+
