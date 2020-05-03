@@ -9,6 +9,7 @@ dataset_directory="data_set/"
 dataset=[]
 car=[]
 tank=[]
+random.seed(1234567890)
 for file in os.listdir(dataset_directory):
     if file.endswith(".txt"):
         dataset.append(file)
@@ -71,6 +72,7 @@ with open("train.txt", "w") as file1:
         else:
             print("skipping_file no jpg found",file)
         
+        
             
 with open("test.txt", "w") as file1:
     directory="test/"
@@ -92,8 +94,8 @@ with open("test.txt", "w") as file1:
                 file1.write("dataset/"+directory+file.split(".")[0]+".jpg"+"\n")
         else:
             print("skipping_file no jpg found",file)
-        file1.write("dataset/"+directory+file.split(".")[0]+".jpg"+"\n")
-
+        
+        
 with open("valid.txt", "w") as file1:
     directory="valid/"
     for file in valid:
@@ -114,15 +116,15 @@ with open("valid.txt", "w") as file1:
                 file1.write("dataset/"+directory+file.split(".")[0]+".jpg"+"\n")
         else:
             print("skipping_file no jpg found",file)
-        file1.write("dataset/"+directory+file.split(".")[0]+".jpg"+"\n")
-            
+        
+        
 
 d=0
 d+=len(os.listdir("train"))
-print("train",os.listdir("train"))
+print("train",len(os.listdir("train")))
 d+=len(os.listdir("test"))
-print("test",os.listdir("test"))
+print("test",lenos.listdir("test")))
 d+=len(os.listdir("valid"))
-print("valid",os.listdir("valid"))
+print("valid",len(os.listdir("valid")))
 
 print("number of files copied ",d)
